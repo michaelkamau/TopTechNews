@@ -18,7 +18,7 @@ public class NewsArticle {
     private String url;
 
     @Expose
-    private String urlToImagel;
+    private String urlToImage;
 
     @Expose
     private String publishedAt;
@@ -40,8 +40,8 @@ public class NewsArticle {
         return url;
     }
 
-    public String getUrlToImagel() {
-        return urlToImagel;
+    public String getUrlToImage() {
+        return urlToImage;
     }
 
     public String getPublishedAt() {
@@ -60,7 +60,7 @@ public class NewsArticle {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", url='" + url + '\'' +
-                ", urlToImagel='" + urlToImagel + '\'' +
+                ", urlToImage='" + urlToImage + '\'' +
                 ", publishedAt='" + publishedAt + '\'' +
                 '}';
     }

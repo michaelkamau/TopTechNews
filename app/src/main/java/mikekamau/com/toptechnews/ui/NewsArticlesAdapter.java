@@ -41,7 +41,7 @@ public class NewsArticlesAdapter extends RecyclerView.Adapter<NewsArticlesAdapte
         NewsArticle newsArticle = newsArticlesList.get(position);
 
         // TODO: Complete for image view and time formatting
-        String url = newsArticle.getUrlToImagel();
+        String url = newsArticle.getUrlToImage();
         url = (url == null) ? null : url.trim();
         Glide.with(context)
                 .load(url)
