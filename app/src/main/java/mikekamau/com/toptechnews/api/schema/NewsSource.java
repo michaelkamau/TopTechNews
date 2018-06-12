@@ -2,7 +2,7 @@ package mikekamau.com.toptechnews.api.schema;
 
 import com.google.gson.annotations.Expose;
 
-class NewsSource {
+public class NewsSource {
     @Expose
     private String name;
 
