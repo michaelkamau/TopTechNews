@@ -29,7 +29,8 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        NewArticlesViewModelFactory factory = new NewArticlesViewModelFactory("technology", "a6ea22e66d2347f88dc7a61217894f2b");
+        String newsAPIKey = ""; // TODO: Add your API Key : https://newsapi.org/docs/authentication
+        NewArticlesViewModelFactory factory = new NewArticlesViewModelFactory("technology", newsAPIKey);
         newsArticlesViewModel = ViewModelProviders.of(this, factory).get(NewsArticlesViewModel.class);
         newsArticlesAdapter = new NewsArticlesAdapter(this);
         initUI();
