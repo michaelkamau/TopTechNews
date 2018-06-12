@@ -12,6 +12,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import mikekamau.com.toptechnews.BuildConfig;
 import mikekamau.com.toptechnews.R;
 import mikekamau.com.toptechnews.api.schema.NewsArticlesList;
 import mikekamau.com.toptechnews.viewmodels.NewArticlesViewModelFactory;
@@ -29,7 +30,7 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        String newsAPIKey = ""; // TODO: Add your API Key : https://newsapi.org/docs/authentication
+        String newsAPIKey = BuildConfig.NewsAPIKey; // TODO: Add your API Key from: https://newsapi.org/docs/authentication
         NewArticlesViewModelFactory factory = new NewArticlesViewModelFactory("technology", newsAPIKey);
         newsArticlesViewModel = ViewModelProviders.of(this, factory).get(NewsArticlesViewModel.class);
         newsArticlesAdapter = new NewsArticlesAdapter(this);
